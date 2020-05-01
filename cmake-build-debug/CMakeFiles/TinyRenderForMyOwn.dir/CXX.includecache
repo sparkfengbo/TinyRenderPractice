@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/fengbo/CLionProjects/TinyRenderForMyOwn/tgaimage.cpp
+iostream
+-
+fstream
+-
+string.h
+-
+time.h
+-
+math.h
+-
+tgaimage.h
+/Users/fengbo/CLionProjects/TinyRenderForMyOwn/tgaimage.h
+
+/Users/fengbo/CLionProjects/TinyRenderForMyOwn/tgaimage.h
+fstream
+-
+
