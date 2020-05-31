@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-de
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Lession2.dir/all
 all: CMakeFiles/Lession1_load_model.dir/all
 all: CMakeFiles/Lession1.dir/all
 
@@ -64,10 +65,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Lession2.dir/clean
 clean: CMakeFiles/Lession1_load_model.dir/clean
 clean: CMakeFiles/Lession1.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Lession2.dir
+
+# All Build rule for target.
+CMakeFiles/Lession2.dir/all:
+	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/depend
+	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12 "Built target Lession2"
+.PHONY : CMakeFiles/Lession2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Lession2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Lession2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Lession2.dir/rule
+
+# Convenience name for target.
+Lession2: CMakeFiles/Lession2.dir/rule
+
+.PHONY : Lession2
+
+# clean rule for target.
+CMakeFiles/Lession2.dir/clean:
+	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/clean
+.PHONY : CMakeFiles/Lession2.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Lession1_load_model.dir
@@ -76,7 +105,7 @@ clean: CMakeFiles/Lession1.dir/clean
 CMakeFiles/Lession1_load_model.dir/all:
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/depend
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7 "Built target Lession1_load_model"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8 "Built target Lession1_load_model"
 .PHONY : CMakeFiles/Lession1_load_model.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,12 +132,12 @@ CMakeFiles/Lession1_load_model.dir/clean:
 CMakeFiles/Lession1.dir/all:
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/depend
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target Lession1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target Lession1"
 .PHONY : CMakeFiles/Lession1.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Lession1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Lession1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Lession1.dir/rule

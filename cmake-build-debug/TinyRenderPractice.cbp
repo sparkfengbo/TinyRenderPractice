@@ -17,6 +17,48 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Lession2">
+				<Option output="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Lession2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lession2"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Lession2/fast">
+				<Option output="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Lession2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lession2/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug"/>
 				<Option type="4"/>
@@ -128,20 +170,29 @@
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/L1_load_model_obj.cpp">
 			<Option target="Lession1_load_model"/>
 		</Unit>
+		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/L2_Triangle.cpp">
+			<Option target="Lession2"/>
+			<Option target="Lession1"/>
+		</Unit>
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h">
+			<Option target="Lession2"/>
 			<Option target="Lession1_load_model"/>
 		</Unit>
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/model.cpp">
+			<Option target="Lession2"/>
 			<Option target="Lession1_load_model"/>
 		</Unit>
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/model.h">
+			<Option target="Lession2"/>
 			<Option target="Lession1_load_model"/>
 		</Unit>
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.cpp">
+			<Option target="Lession2"/>
 			<Option target="Lession1_load_model"/>
 			<Option target="Lession1"/>
 		</Unit>
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h">
+			<Option target="Lession2"/>
 			<Option target="Lession1_load_model"/>
 			<Option target="Lession1"/>
 		</Unit>

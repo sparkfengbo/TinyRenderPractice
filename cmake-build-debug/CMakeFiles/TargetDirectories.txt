@@ -1,3 +1,4 @@
+/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession2.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession1_load_model.dir
