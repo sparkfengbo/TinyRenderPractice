@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/fengbo/CLionProjects/TinyRenderForMyOwn
+CMAKE_SOURCE_DIR = /Users/fengbo/CLionProjects/TinyRenderPractice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TinyRenderForMyOwn
+# Target rules for targets named Lession1
 
 # Build rule for target.
-TinyRenderForMyOwn: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TinyRenderForMyOwn
-.PHONY : TinyRenderForMyOwn
+Lession1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Lession1
+.PHONY : Lession1
 
 # fast build rule for target.
-TinyRenderForMyOwn/fast:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/build
-.PHONY : TinyRenderForMyOwn/fast
+Lession1/fast:
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/build
+.PHONY : Lession1/fast
 
-main.o: main.cpp.o
+L1_Bresenham_Line_Algorithm.o: L1_Bresenham_Line_Algorithm.cpp.o
 
-.PHONY : main.o
+.PHONY : L1_Bresenham_Line_Algorithm.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.o
-.PHONY : main.cpp.o
+L1_Bresenham_Line_Algorithm.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/L1_Bresenham_Line_Algorithm.cpp.o
+.PHONY : L1_Bresenham_Line_Algorithm.cpp.o
 
-main.i: main.cpp.i
+L1_Bresenham_Line_Algorithm.i: L1_Bresenham_Line_Algorithm.cpp.i
 
-.PHONY : main.i
+.PHONY : L1_Bresenham_Line_Algorithm.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.i
-.PHONY : main.cpp.i
+L1_Bresenham_Line_Algorithm.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/L1_Bresenham_Line_Algorithm.cpp.i
+.PHONY : L1_Bresenham_Line_Algorithm.cpp.i
 
-main.s: main.cpp.s
+L1_Bresenham_Line_Algorithm.s: L1_Bresenham_Line_Algorithm.cpp.s
 
-.PHONY : main.s
+.PHONY : L1_Bresenham_Line_Algorithm.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.s
-.PHONY : main.cpp.s
+L1_Bresenham_Line_Algorithm.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/L1_Bresenham_Line_Algorithm.cpp.s
+.PHONY : L1_Bresenham_Line_Algorithm.cpp.s
 
 tgaimage.o: tgaimage.cpp.o
 
@@ -156,7 +156,7 @@ tgaimage.o: tgaimage.cpp.o
 
 # target to build an object file
 tgaimage.cpp.o:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.o
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.o
 .PHONY : tgaimage.cpp.o
 
 tgaimage.i: tgaimage.cpp.i
@@ -165,7 +165,7 @@ tgaimage.i: tgaimage.cpp.i
 
 # target to preprocess a source file
 tgaimage.cpp.i:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.i
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.i
 .PHONY : tgaimage.cpp.i
 
 tgaimage.s: tgaimage.cpp.s
@@ -174,7 +174,7 @@ tgaimage.s: tgaimage.cpp.s
 
 # target to generate assembly for a file
 tgaimage.cpp.s:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.s
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.s
 .PHONY : tgaimage.cpp.s
 
 # Help Target
@@ -185,10 +185,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... TinyRenderForMyOwn"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Lession1"
+	@echo "... L1_Bresenham_Line_Algorithm.o"
+	@echo "... L1_Bresenham_Line_Algorithm.i"
+	@echo "... L1_Bresenham_Line_Algorithm.s"
 	@echo "... tgaimage.o"
 	@echo "... tgaimage.i"
 	@echo "... tgaimage.s"

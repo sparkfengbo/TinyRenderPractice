@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/fengbo/CLionProjects/TinyRenderPractice/L1_Bresenham_Line_Algorithm.cpp
+L1_Bresenham_Line_Algorithm.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/L1_Bresenham_Line_Algorithm.h
+iostream
+-
+tgaimage.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
+
+/Users/fengbo/CLionProjects/TinyRenderPractice/L1_Bresenham_Line_Algorithm.h
+
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
+fstream
+-
+

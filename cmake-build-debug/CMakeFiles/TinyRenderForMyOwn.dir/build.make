@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/fengbo/CLionProjects/TinyRenderForMyOwn
+CMAKE_SOURCE_DIR = /Users/fengbo/CLionProjects/TinyRenderPractice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TinyRenderForMyOwn.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/TinyRenderForMyOwn.dir/flags.make
 
 CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.o: CMakeFiles/TinyRenderForMyOwn.dir/flags.make
 CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.o -c /Users/fengbo/CLionProjects/TinyRenderForMyOwn/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.o -c /Users/fengbo/CLionProjects/TinyRenderPractice/main.cpp
 
 CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/fengbo/CLionProjects/TinyRenderForMyOwn/main.cpp > CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/fengbo/CLionProjects/TinyRenderPractice/main.cpp > CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.i
 
 CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/fengbo/CLionProjects/TinyRenderForMyOwn/main.cpp -o CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/fengbo/CLionProjects/TinyRenderPractice/main.cpp -o CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.s
 
 CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.o: CMakeFiles/TinyRenderForMyOwn.dir/flags.make
 CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.o: ../tgaimage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.o -c /Users/fengbo/CLionProjects/TinyRenderForMyOwn/tgaimage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.o -c /Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.cpp
 
 CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/fengbo/CLionProjects/TinyRenderForMyOwn/tgaimage.cpp > CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.cpp > CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.i
 
 CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/fengbo/CLionProjects/TinyRenderForMyOwn/tgaimage.cpp -o CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.cpp -o CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.s
 
 # Object files for target TinyRenderForMyOwn
 TinyRenderForMyOwn_OBJECTS = \
@@ -95,7 +95,7 @@ TinyRenderForMyOwn: CMakeFiles/TinyRenderForMyOwn.dir/main.cpp.o
 TinyRenderForMyOwn: CMakeFiles/TinyRenderForMyOwn.dir/tgaimage.cpp.o
 TinyRenderForMyOwn: CMakeFiles/TinyRenderForMyOwn.dir/build.make
 TinyRenderForMyOwn: CMakeFiles/TinyRenderForMyOwn.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TinyRenderForMyOwn"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TinyRenderForMyOwn"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TinyRenderForMyOwn.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/TinyRenderForMyOwn.dir/clean:
 .PHONY : CMakeFiles/TinyRenderForMyOwn.dir/clean
 
 CMakeFiles/TinyRenderForMyOwn.dir/depend:
-	cd /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/fengbo/CLionProjects/TinyRenderForMyOwn /Users/fengbo/CLionProjects/TinyRenderForMyOwn /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles/TinyRenderForMyOwn.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/fengbo/CLionProjects/TinyRenderPractice /Users/fengbo/CLionProjects/TinyRenderPractice /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/TinyRenderForMyOwn.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TinyRenderForMyOwn.dir/depend
 

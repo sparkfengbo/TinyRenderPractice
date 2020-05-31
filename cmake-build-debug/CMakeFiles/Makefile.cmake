@@ -52,5 +52,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/TinyRenderForMyOwn.dir/DependInfo.cmake"
+  "CMakeFiles/Lession1.dir/DependInfo.cmake"
   )

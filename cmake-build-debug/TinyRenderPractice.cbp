@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="TinyRenderForMyOwn"/>
+		<Option title="TinyRenderPractice"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -37,8 +37,8 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TinyRenderPractice">
-				<Option output="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/TinyRenderPractice" prefix_auto="0" extension_auto="0"/>
+			<Target title="Lession1">
+				<Option output="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Lession1" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -52,14 +52,14 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyRenderPractice"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lession1"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TinyRenderPractice/fast">
-				<Option output="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/TinyRenderPractice" prefix_auto="0" extension_auto="0"/>
+			<Target title="Lession1/fast">
+				<Option output="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Lession1" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -73,21 +73,24 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 TinyRenderPractice/fast"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 Lession1/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/main.cpp">
-			<Option target="TinyRenderPractice"/>
+		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/L1_Bresenham_Line_Algorithm.cpp">
+			<Option target="Lession1"/>
+		</Unit>
+		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/L1_Bresenham_Line_Algorithm.h">
+			<Option target="Lession1"/>
 		</Unit>
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.cpp">
-			<Option target="TinyRenderPractice"/>
+			<Option target="Lession1"/>
 		</Unit>
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h">
-			<Option target="TinyRenderPractice"/>
+			<Option target="Lession1"/>
 		</Unit>
 		<Unit filename="/Users/fengbo/CLionProjects/TinyRenderPractice/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

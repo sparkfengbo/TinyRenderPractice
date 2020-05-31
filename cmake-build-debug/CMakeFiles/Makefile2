@@ -44,16 +44,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/fengbo/CLionProjects/TinyRenderForMyOwn
+CMAKE_SOURCE_DIR = /Users/fengbo/CLionProjects/TinyRenderPractice
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/TinyRenderForMyOwn.dir/all
+all: CMakeFiles/Lession1.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/TinyRenderForMyOwn.dir/clean
+clean: CMakeFiles/Lession1.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/TinyRenderForMyOwn.dir
+# Target rules for target CMakeFiles/Lession1.dir
 
 # All Build rule for target.
-CMakeFiles/TinyRenderForMyOwn.dir/all:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/depend
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target TinyRenderForMyOwn"
-.PHONY : CMakeFiles/TinyRenderForMyOwn.dir/all
+CMakeFiles/Lession1.dir/all:
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/depend
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target Lession1"
+.PHONY : CMakeFiles/Lession1.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/TinyRenderForMyOwn.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TinyRenderForMyOwn.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderForMyOwn/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/TinyRenderForMyOwn.dir/rule
+CMakeFiles/Lession1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Lession1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Lession1.dir/rule
 
 # Convenience name for target.
-TinyRenderForMyOwn: CMakeFiles/TinyRenderForMyOwn.dir/rule
+Lession1: CMakeFiles/Lession1.dir/rule
 
-.PHONY : TinyRenderForMyOwn
+.PHONY : Lession1
 
 # clean rule for target.
-CMakeFiles/TinyRenderForMyOwn.dir/clean:
-	$(MAKE) -f CMakeFiles/TinyRenderForMyOwn.dir/build.make CMakeFiles/TinyRenderForMyOwn.dir/clean
-.PHONY : CMakeFiles/TinyRenderForMyOwn.dir/clean
+CMakeFiles/Lession1.dir/clean:
+	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/clean
+.PHONY : CMakeFiles/Lession1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
