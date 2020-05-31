@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Lession1_load_model
+
+# Build rule for target.
+Lession1_load_model: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Lession1_load_model
+.PHONY : Lession1_load_model
+
+# fast build rule for target.
+Lession1_load_model/fast:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/build
+.PHONY : Lession1_load_model/fast
+
+#=============================================================================
 # Target rules for targets named Lession1
 
 # Build rule for target.
@@ -150,12 +163,67 @@ L1_Bresenham_Line_Algorithm.cpp.s:
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/L1_Bresenham_Line_Algorithm.cpp.s
 .PHONY : L1_Bresenham_Line_Algorithm.cpp.s
 
+L1_load_model_obj.o: L1_load_model_obj.cpp.o
+
+.PHONY : L1_load_model_obj.o
+
+# target to build an object file
+L1_load_model_obj.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/L1_load_model_obj.cpp.o
+.PHONY : L1_load_model_obj.cpp.o
+
+L1_load_model_obj.i: L1_load_model_obj.cpp.i
+
+.PHONY : L1_load_model_obj.i
+
+# target to preprocess a source file
+L1_load_model_obj.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/L1_load_model_obj.cpp.i
+.PHONY : L1_load_model_obj.cpp.i
+
+L1_load_model_obj.s: L1_load_model_obj.cpp.s
+
+.PHONY : L1_load_model_obj.s
+
+# target to generate assembly for a file
+L1_load_model_obj.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/L1_load_model_obj.cpp.s
+.PHONY : L1_load_model_obj.cpp.s
+
+model.o: model.cpp.o
+
+.PHONY : model.o
+
+# target to build an object file
+model.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.o
+.PHONY : model.cpp.o
+
+model.i: model.cpp.i
+
+.PHONY : model.i
+
+# target to preprocess a source file
+model.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.i
+.PHONY : model.cpp.i
+
+model.s: model.cpp.s
+
+.PHONY : model.s
+
+# target to generate assembly for a file
+model.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.s
+.PHONY : model.cpp.s
+
 tgaimage.o: tgaimage.cpp.o
 
 .PHONY : tgaimage.o
 
 # target to build an object file
 tgaimage.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.o
 .PHONY : tgaimage.cpp.o
 
@@ -165,6 +233,7 @@ tgaimage.i: tgaimage.cpp.i
 
 # target to preprocess a source file
 tgaimage.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.i
 .PHONY : tgaimage.cpp.i
 
@@ -174,6 +243,7 @@ tgaimage.s: tgaimage.cpp.s
 
 # target to generate assembly for a file
 tgaimage.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.s
 .PHONY : tgaimage.cpp.s
 
@@ -185,10 +255,17 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... Lession1_load_model"
 	@echo "... Lession1"
 	@echo "... L1_Bresenham_Line_Algorithm.o"
 	@echo "... L1_Bresenham_Line_Algorithm.i"
 	@echo "... L1_Bresenham_Line_Algorithm.s"
+	@echo "... L1_load_model_obj.o"
+	@echo "... L1_load_model_obj.i"
+	@echo "... L1_load_model_obj.s"
+	@echo "... model.o"
+	@echo "... model.i"
+	@echo "... model.s"
 	@echo "... tgaimage.o"
 	@echo "... tgaimage.i"
 	@echo "... tgaimage.s"

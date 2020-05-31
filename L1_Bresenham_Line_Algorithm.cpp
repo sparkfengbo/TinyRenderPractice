@@ -2,8 +2,6 @@
 // Created by fengbo on 2020/5/31.
 //
 
-#include "L1_Bresenham_Line_Algorithm.h"
-
 #include <iostream>
 #include "tgaimage.h"
 
@@ -156,11 +154,11 @@ void bresenham_line(int x0, int y0, int x1, int y1, TGAImage &image, TGAColor co
     int dx = x1 - x0;
     int dy = y1 - y0;
 
-    float derror = dy * 2;
-    float error = 0;
-    float deta = dx * 2;
+    int derror = std::abs(dy) * 2;
+    int error = 0;
+    int deta = dx * 2;
     int y = y0;
-    for (int x = x0; x < x1; x++) {
+    for (int x = x0; x <= x1; x++) {
         if (steep) {
             image.set(y, x, color);
         } else {
