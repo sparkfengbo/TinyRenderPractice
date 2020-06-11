@@ -9,6 +9,7 @@ CMakeFiles/Lession3.dir/L3_zBuffer.cpp.o: ../tgaimage.h
 CMakeFiles/Lession3.dir/model.cpp.o: ../geometry.h
 CMakeFiles/Lession3.dir/model.cpp.o: ../model.cpp
 CMakeFiles/Lession3.dir/model.cpp.o: ../model.h
+CMakeFiles/Lession3.dir/model.cpp.o: ../tgaimage.h
 
 CMakeFiles/Lession3.dir/tgaimage.cpp.o: ../tgaimage.cpp
 CMakeFiles/Lession3.dir/tgaimage.cpp.o: ../tgaimage.h

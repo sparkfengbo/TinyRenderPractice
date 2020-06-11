@@ -7,14 +7,18 @@
 #IncludeRegexTransform: 
 
 /Users/fengbo/CLionProjects/TinyRenderPractice/L3_zBuffer.cpp
-tgaimage.h
-/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
-geometry.h
-/Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
-model.h
-/Users/fengbo/CLionProjects/TinyRenderPractice/model.h
 vector
 -
+cmath
+-
+limits
+-
+tgaimage.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
+model.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/model.h
+geometry.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
 
 /Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
 cmath
@@ -27,6 +31,8 @@ vector
 -
 geometry.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+tgaimage.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
 
 /Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
 fstream
