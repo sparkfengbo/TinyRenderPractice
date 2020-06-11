@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Lession3
+
+# Build rule for target.
+Lession3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Lession3
+.PHONY : Lession3
+
+# fast build rule for target.
+Lession3/fast:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/build
+.PHONY : Lession3/fast
+
+#=============================================================================
 # Target rules for targets named Lession2
 
 # Build rule for target.
@@ -233,12 +246,40 @@ L2_Triangle.cpp.s:
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/L2_Triangle.cpp.s
 .PHONY : L2_Triangle.cpp.s
 
+L3_zBuffer.o: L3_zBuffer.cpp.o
+
+.PHONY : L3_zBuffer.o
+
+# target to build an object file
+L3_zBuffer.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/L3_zBuffer.cpp.o
+.PHONY : L3_zBuffer.cpp.o
+
+L3_zBuffer.i: L3_zBuffer.cpp.i
+
+.PHONY : L3_zBuffer.i
+
+# target to preprocess a source file
+L3_zBuffer.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/L3_zBuffer.cpp.i
+.PHONY : L3_zBuffer.cpp.i
+
+L3_zBuffer.s: L3_zBuffer.cpp.s
+
+.PHONY : L3_zBuffer.s
+
+# target to generate assembly for a file
+L3_zBuffer.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/L3_zBuffer.cpp.s
+.PHONY : L3_zBuffer.cpp.s
+
 model.o: model.cpp.o
 
 .PHONY : model.o
 
 # target to build an object file
 model.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.o
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.o
 .PHONY : model.cpp.o
@@ -249,6 +290,7 @@ model.i: model.cpp.i
 
 # target to preprocess a source file
 model.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.i
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.i
 .PHONY : model.cpp.i
@@ -259,6 +301,7 @@ model.s: model.cpp.s
 
 # target to generate assembly for a file
 model.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.s
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.s
 .PHONY : model.cpp.s
@@ -269,6 +312,7 @@ tgaimage.o: tgaimage.cpp.o
 
 # target to build an object file
 tgaimage.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.o
@@ -280,6 +324,7 @@ tgaimage.i: tgaimage.cpp.i
 
 # target to preprocess a source file
 tgaimage.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.i
@@ -291,6 +336,7 @@ tgaimage.s: tgaimage.cpp.s
 
 # target to generate assembly for a file
 tgaimage.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.s
@@ -302,8 +348,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Lession2"
 	@echo "... rebuild_cache"
+	@echo "... Lession3"
+	@echo "... Lession2"
 	@echo "... edit_cache"
 	@echo "... Lession1_load_model"
 	@echo "... Lession1"
@@ -316,6 +363,9 @@ help:
 	@echo "... L2_Triangle.o"
 	@echo "... L2_Triangle.i"
 	@echo "... L2_Triangle.s"
+	@echo "... L3_zBuffer.o"
+	@echo "... L3_zBuffer.i"
+	@echo "... L3_zBuffer.s"
 	@echo "... model.o"
 	@echo "... model.i"
 	@echo "... model.s"
