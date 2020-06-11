@@ -189,13 +189,8 @@ void triangle4(Vec2i t0, Vec2i t1, Vec2i t2, TGAImage &image, TGAColor color) {
     }
 }
 
-Vec3f cross(Vec3f v1, Vec3f v2) {
-    Vec3f ret = Vec3f(v1.y*v2.z - v1.z*v2.y, v1.z*v2.x - v1.x*v2.z, v1.x*v2.y - v1.y*v2.x);
-    return ret;
-}
-
 Vec3f barycentric(Vec2i *pts, Vec2i P) {
-    Vec3f u = cross(Vec3f(pts[2][0]-pts[0][0], pts[1][0]-pts[0][0], pts[0][0]-P[0]), Vec3f(pts[2][1]-pts[0][1], pts[1][1]-pts[0][1], pts[0][1]-P[1]));
+    Vec3f u = Vec3f(pts[2][0]-pts[0][0], pts[1][0]-pts[0][0], pts[0][0]-P[0]) ^ Vec3f(pts[2][1]-pts[0][1], pts[1][1]-pts[0][1], pts[0][1]-P[1]);
     /* `pts` and `P` has integer value as coordinates
        so `abs(u[2])` < 1 means `u[2]` is 0, that means
        triangle is degenerate, in this case return something with negative coordinates */
@@ -214,7 +209,6 @@ void barycentric_triangle(Vec2i *pts, TGAImage &image, TGAColor color) {
             rectFMax[j] = std::min(clamp[j], std::max(rectFMax[j], pts[i][j]));
         }
     }
-
 
     Vec2i P;
     for (P.x = rectFMin.x; P.x <= rectFMax.x; P.x++) {
