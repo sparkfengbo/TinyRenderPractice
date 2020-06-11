@@ -22,6 +22,8 @@ template <class t> struct Vec2 {
     inline Vec2<t> operator -(const Vec2<t> &V) const { return Vec2<t>(u-V.u, v-V.v); }
     inline Vec2<t> operator *(float f)          const { return Vec2<t>(u*f, v*f); }
     template <class > friend std::ostream& operator<<(std::ostream& s, Vec2<t>& v);
+
+    t& operator[](const int i) {return raw[i];}
 };
 
 template <class t> struct Vec3 {
@@ -40,7 +42,10 @@ template <class t> struct Vec3 {
     float norm () const { return std::sqrt(x*x+y*y+z*z); }
     Vec3<t> & normalize(t l=1) { *this = (*this)*(l/norm()); return *this; }
     template <class > friend std::ostream& operator<<(std::ostream& s, Vec3<t>& v);
+    t& operator[](const int i) {return raw[i];}
+
 };
+
 
 typedef Vec2<float> Vec2f;
 typedef Vec2<int>   Vec2i;
@@ -56,4 +61,6 @@ template <class t> std::ostream& operator<<(std::ostream& s, Vec3<t>& v) {
     s << "(" << v.x << ", " << v.y << ", " << v.z << ")\n";
     return s;
 }
+
+
 #endif //TINYRENDERPRACTICE_GEOMETRY_H

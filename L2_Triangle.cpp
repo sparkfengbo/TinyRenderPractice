@@ -65,6 +65,7 @@ void triangle0(Vec2i t0, Vec2i t1, Vec2i t2, TGAImage &image, TGAColor color) {
 }
 
 void triangle1(Vec2i t0, Vec2i t1, Vec2i t2, TGAImage &image, TGAColor color) {
+    //冒泡排序  t0 < t1 < t2
     if (t0.y > t1.y) {
         std::swap(t0, t1);
     }
@@ -188,50 +189,41 @@ void triangle4(Vec2i t0, Vec2i t1, Vec2i t2, TGAImage &image, TGAColor color) {
     }
 }
 
-//TODO
-//Vec3f barycentric(Vec2i *pts, Vec2i P) {
-//    Vec3f u = cross(Vec3f(pts[2][0]-pts[0][0], pts[1][0]-pts[0][0], pts[0][0]-P[0]), Vec3f(pts[2][1]-pts[0][1], pts[1][1]-pts[0][1], pts[0][1]-P[1]));
-//}
+Vec3f cross(Vec3f v1, Vec3f v2) {
+    Vec3f ret = Vec3f(v1.y*v2.z - v1.z*v2.y, v1.z*v2.x - v1.x*v2.z, v1.x*v2.y - v1.y*v2.x);
+    return ret;
+}
+
+Vec3f barycentric(Vec2i *pts, Vec2i P) {
+    Vec3f u = cross(Vec3f(pts[2][0]-pts[0][0], pts[1][0]-pts[0][0], pts[0][0]-P[0]), Vec3f(pts[2][1]-pts[0][1], pts[1][1]-pts[0][1], pts[0][1]-P[1]));
+    /* `pts` and `P` has integer value as coordinates
+       so `abs(u[2])` < 1 means `u[2]` is 0, that means
+       triangle is degenerate, in this case return something with negative coordinates */
+    if (std::abs(u[2])<1) return Vec3f(-1,1,1);
+    return Vec3f(1.f-(u.x+u.y)/u.z, u.y/u.z, u.x/u.z);
+}
 
 void barycentric_triangle(Vec2i *pts, TGAImage &image, TGAColor color) {
-//    Vec2i rectFMax(0, 0);
-//    Vec2i rectFMin(image.get_width() - 1, image.get_height() - 1);
-//
-//    Vec2i clamp(image.get_width() - 1, image.get_height() - 1);
-//    for (int i = 0; i < 3; i++) {
-//        for (int j = 0; j < 2; j++) {
-//            rectFMin[j] = std::max(0, std::min(rectFMin[j], pts[i][j]));
-//            rectFMax[j] = std::min(clamp[j], std::max(rectFMax[j], pts[i][j]));
-//        }
-//    }
-//
-//
-//    Vec2i P;
-//    for (P.x = rectFMin.x; P.x <= rectFMax.x; P.x++) {
-//        for (P.y = rectFMin.y; P.y <= rectFMax.y; P.y++) {
-//            Vec3f bc_screen = barycentric(pts, P);
-//            if (bc_screen.x < 0 || bc_screen.y < 0 || bc_screen.z < 0) continue;
-//            image.set(P.x, P.y, color);
-//        }
-//    }
+    Vec2i rectFMax(0, 0);
+    Vec2i rectFMin(image.get_width() - 1, image.get_height() - 1);
 
-//    Vec2i bboxmin(image.get_width()-1,  image.get_height()-1);
-//    Vec2i bboxmax(0, 0);
-//    Vec2i clamp(image.get_width()-1, image.get_height()-1);
-//    for (int i=0; i<3; i++) {
-//        for (int j=0; j<2; j++) {
-//            bboxmin[j] = std::max(0,        std::min(bboxmin[j], pts[i][j]));
-//            bboxmax[j] = std::min(clamp[j], std::max(bboxmax[j], pts[i][j]));
-//        }
-//    }
-//    Vec2i P;
-//    for (P.x=bboxmin.x; P.x<=bboxmax.x; P.x++) {
-//        for (P.y=bboxmin.y; P.y<=bboxmax.y; P.y++) {
-//            Vec3f bc_screen  = barycentric(pts, P);
-//            if (bc_screen.x<0 || bc_screen.y<0 || bc_screen.z<0) continue;
-//            image.set(P.x, P.y, color);
-//        }
-//    }
+    Vec2i clamp(image.get_width() - 1, image.get_height() - 1);
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            rectFMin[j] = std::max(0, std::min(rectFMin[j], pts[i][j]));
+            rectFMax[j] = std::min(clamp[j], std::max(rectFMax[j], pts[i][j]));
+        }
+    }
+
+
+    Vec2i P;
+    for (P.x = rectFMin.x; P.x <= rectFMax.x; P.x++) {
+        for (P.y = rectFMin.y; P.y <= rectFMax.y; P.y++) {
+            Vec3f bc_screen = barycentric(pts, P);
+            if (bc_screen.x < 0 || bc_screen.y < 0 || bc_screen.z < 0) continue;
+            image.set(P.x, P.y, color);
+        }
+    }
 }
 
 int main(int argc, char **argv) {
@@ -288,14 +280,14 @@ int main(int argc, char **argv) {
     image_triangle4.write_tga_file("image_triangle4.tga");
 
 
-//    TGAImage image_triangle_barycentric(width, height, TGAImage::RGB);
-//
-//    barycentric_triangle(t0, image_triangle_barycentric, red);
-//    barycentric_triangle(t1, image_triangle_barycentric, white);
-//    barycentric_triangle(t2, image_triangle_barycentric, green);
-//
-//    image_triangle_barycentric.flip_vertically(); // i want to have the origin at the left bottom corner of the image
-//    image_triangle_barycentric.write_tga_file("image_triangle_barycentric.tga");
+    TGAImage image_triangle_barycentric(width, height, TGAImage::RGB);
+
+    barycentric_triangle(t0, image_triangle_barycentric, red);
+    barycentric_triangle(t1, image_triangle_barycentric, white);
+    barycentric_triangle(t2, image_triangle_barycentric, green);
+
+    image_triangle_barycentric.flip_vertically(); // i want to have the origin at the left bottom corner of the image
+    image_triangle_barycentric.write_tga_file("image_triangle_barycentric.tga");
 
 
     Model *model = new Model("../obj/african_head.obj");

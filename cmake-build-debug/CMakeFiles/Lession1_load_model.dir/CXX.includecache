@@ -26,6 +26,20 @@ cmath
 ostream
 -
 
+/Users/fengbo/CLionProjects/TinyRenderPractice/model.cpp
+model.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/model.h
+iostream
+-
+string
+-
+fstream
+-
+sstream
+-
+vector
+-
+
 /Users/fengbo/CLionProjects/TinyRenderPractice/model.h
 vector
 -
