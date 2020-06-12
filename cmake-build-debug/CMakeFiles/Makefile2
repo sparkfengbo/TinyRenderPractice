@@ -53,6 +53,7 @@ CMAKE_BINARY_DIR = /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-de
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Lession4.dir/all
 all: CMakeFiles/Lession3.dir/all
 all: CMakeFiles/Lession2.dir/all
 all: CMakeFiles/Lession1_load_model.dir/all
@@ -66,12 +67,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Lession4.dir/clean
 clean: CMakeFiles/Lession3.dir/clean
 clean: CMakeFiles/Lession2.dir/clean
 clean: CMakeFiles/Lession1_load_model.dir/clean
 clean: CMakeFiles/Lession1.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Lession4.dir
+
+# All Build rule for target.
+CMakeFiles/Lession4.dir/all:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/depend
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=17,18,19,20,21 "Built target Lession4"
+.PHONY : CMakeFiles/Lession4.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Lession4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Lession4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Lession4.dir/rule
+
+# Convenience name for target.
+Lession4: CMakeFiles/Lession4.dir/rule
+
+.PHONY : Lession4
+
+# clean rule for target.
+CMakeFiles/Lession4.dir/clean:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/clean
+.PHONY : CMakeFiles/Lession4.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Lession3.dir

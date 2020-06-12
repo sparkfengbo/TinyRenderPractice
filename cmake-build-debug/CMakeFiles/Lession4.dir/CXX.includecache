@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/fengbo/CLionProjects/TinyRenderPractice/L4_PerspectiveProjection.cpp
+vector
+-
+cmath
+-
+limits
+-
+tgaimage.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
+model.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/model.h
+geometry.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+
+/Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+cmath
+-
+ostream
+-
+
+/Users/fengbo/CLionProjects/TinyRenderPractice/model.h
+vector
+-
+geometry.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+tgaimage.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
+
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
+fstream
+-
+

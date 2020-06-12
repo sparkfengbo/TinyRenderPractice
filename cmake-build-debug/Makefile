@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Lession4
+
+# Build rule for target.
+Lession4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Lession4
+.PHONY : Lession4
+
+# fast build rule for target.
+Lession4/fast:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/build
+.PHONY : Lession4/fast
+
+#=============================================================================
 # Target rules for targets named Lession3
 
 # Build rule for target.
@@ -273,12 +286,67 @@ L3_zBuffer.cpp.s:
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/L3_zBuffer.cpp.s
 .PHONY : L3_zBuffer.cpp.s
 
+L4_PerspectiveProjection.o: L4_PerspectiveProjection.cpp.o
+
+.PHONY : L4_PerspectiveProjection.o
+
+# target to build an object file
+L4_PerspectiveProjection.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/L4_PerspectiveProjection.cpp.o
+.PHONY : L4_PerspectiveProjection.cpp.o
+
+L4_PerspectiveProjection.i: L4_PerspectiveProjection.cpp.i
+
+.PHONY : L4_PerspectiveProjection.i
+
+# target to preprocess a source file
+L4_PerspectiveProjection.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/L4_PerspectiveProjection.cpp.i
+.PHONY : L4_PerspectiveProjection.cpp.i
+
+L4_PerspectiveProjection.s: L4_PerspectiveProjection.cpp.s
+
+.PHONY : L4_PerspectiveProjection.s
+
+# target to generate assembly for a file
+L4_PerspectiveProjection.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/L4_PerspectiveProjection.cpp.s
+.PHONY : L4_PerspectiveProjection.cpp.s
+
+geometry.o: geometry.cpp.o
+
+.PHONY : geometry.o
+
+# target to build an object file
+geometry.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/geometry.cpp.o
+.PHONY : geometry.cpp.o
+
+geometry.i: geometry.cpp.i
+
+.PHONY : geometry.i
+
+# target to preprocess a source file
+geometry.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/geometry.cpp.i
+.PHONY : geometry.cpp.i
+
+geometry.s: geometry.cpp.s
+
+.PHONY : geometry.s
+
+# target to generate assembly for a file
+geometry.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/geometry.cpp.s
+.PHONY : geometry.cpp.s
+
 model.o: model.cpp.o
 
 .PHONY : model.o
 
 # target to build an object file
 model.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/model.cpp.o
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.o
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.o
@@ -290,6 +358,7 @@ model.i: model.cpp.i
 
 # target to preprocess a source file
 model.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/model.cpp.i
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.i
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.i
@@ -301,6 +370,7 @@ model.s: model.cpp.s
 
 # target to generate assembly for a file
 model.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/model.cpp.s
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.s
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.s
@@ -312,6 +382,7 @@ tgaimage.o: tgaimage.cpp.o
 
 # target to build an object file
 tgaimage.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.o
@@ -324,6 +395,7 @@ tgaimage.i: tgaimage.cpp.i
 
 # target to preprocess a source file
 tgaimage.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.i
@@ -336,6 +408,7 @@ tgaimage.s: tgaimage.cpp.s
 
 # target to generate assembly for a file
 tgaimage.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.s
@@ -349,9 +422,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... Lession4"
 	@echo "... Lession3"
 	@echo "... Lession2"
-	@echo "... edit_cache"
 	@echo "... Lession1_load_model"
 	@echo "... Lession1"
 	@echo "... L1_Bresenham_Line_Algorithm.o"
@@ -366,6 +440,12 @@ help:
 	@echo "... L3_zBuffer.o"
 	@echo "... L3_zBuffer.i"
 	@echo "... L3_zBuffer.s"
+	@echo "... L4_PerspectiveProjection.o"
+	@echo "... L4_PerspectiveProjection.i"
+	@echo "... L4_PerspectiveProjection.s"
+	@echo "... geometry.o"
+	@echo "... geometry.i"
+	@echo "... geometry.s"
 	@echo "... model.o"
 	@echo "... model.i"
 	@echo "... model.s"

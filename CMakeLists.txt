@@ -11,3 +11,6 @@ add_executable(Lession2 tgaimage.cpp tgaimage.h L2_Triangle.cpp model.cpp model.
 
 add_executable(Lession3 tgaimage.cpp tgaimage.h L3_zBuffer.cpp model.cpp model.h geometry.h)
 
+add_executable(Lession4 tgaimage.cpp tgaimage.h L4_PerspectiveProjection.cpp model.cpp model.h geometry.h geometry.cpp)
+
+
