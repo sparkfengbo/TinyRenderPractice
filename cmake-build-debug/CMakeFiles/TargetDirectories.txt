@@ -1,5 +1,6 @@
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession5.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession4.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession3.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession2.dir

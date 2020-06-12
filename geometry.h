@@ -67,22 +67,23 @@ template <class t> std::ostream& operator<<(std::ostream& s, Vec3<t>& v) {
 
 const int DEFAULT_ALLOC=4;
 
+
 class Matrix {
     std::vector<std::vector<float> > m;
     int rows, cols;
 public:
-    Matrix(int r=DEFAULT_ALLOC, int c=DEFAULT_ALLOC);
-    inline int nrows();
-    inline int ncols();
-
+    Matrix(int r=4, int c=4);
+    Matrix(Vec3f v);
+    int nrows();
+    int ncols();
     static Matrix identity(int dimensions);
     std::vector<float>& operator[](const int i);
     Matrix operator*(const Matrix& a);
     Matrix transpose();
     Matrix inverse();
-
     friend std::ostream& operator<<(std::ostream& s, Matrix& m);
 };
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
