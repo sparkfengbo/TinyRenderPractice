@@ -1,6 +1,7 @@
 #include <vector>
 #include <cmath>
 #include <limits>
+#include <iostream>
 #include "tgaimage.h"
 #include "model.h"
 #include "geometry.h"
@@ -29,6 +30,7 @@ void triangle_texture(Vec3i t0, Vec3i t1, Vec3i t2, Vec2i uv0, Vec2i uv1, Vec2i 
         Vec3i A =               t0 + (t2-t0)*alpha;
         Vec3i B = second_half ? t1 + (t2-t1)*beta : t0 + (t1-t0)*beta;
 
+
         Vec2i uvA =               uv0 +      (uv2-uv0)*alpha;
         Vec2i uvB = second_half ? uv1 +      (uv2-uv1)*beta : uv0 +      (uv1-uv0)*beta;
 
@@ -42,7 +44,9 @@ void triangle_texture(Vec3i t0, Vec3i t1, Vec3i t2, Vec2i uv0, Vec2i uv1, Vec2i 
             if (zbuffer[idx]<P.z) {
                 zbuffer[idx] = P.z;
                 TGAColor color = model->diffuse(uvP);
-                image.set(P.x, P.y, TGAColor(color.bgra[2]*intensity, color.bgra[1]*intensity, color.bgra[0]*intensity));
+                std::cout<<"P.x = " << P.x <<" P.y = " << P.y <<" R = " << color.bgra[2]*intensity <<" G = " << color.bgra[1]*intensity <<" B = " << color.bgra[0]*intensity  << "\n";
+//                image.set(P.x, P.y, TGAColor(color.bgra[2]*intensity, color.bgra[1]*intensity, color.bgra[0]*intensity));
+                image.set(j, (t0.y+i), TGAColor(color.bgra[2]*intensity, color.bgra[1]*intensity, color.bgra[0]*intensity));
             }
         }
     }
@@ -108,7 +112,7 @@ int main(int argc, char** argv) {
         }
 
         image.flip_vertically(); // i want to have the origin at the left bottom corner of the image
-        image.write_tga_file("output.tga");
+        image.write_tga_file("l3_output.tga");
 
         delete [] zbuffer;
     }
@@ -149,12 +153,14 @@ int main(int argc, char** argv) {
                 for (int k=0; k<3; k++) {
                     uv[k] = model->uv(i, k);
                 }
+                std::cout<<"instensity = " << intensity << "\n";
                 triangle_texture(screen_coords[0], screen_coords[1], screen_coords[2], uv[0], uv[1], uv[2], image, intensity, zbuffer);
+
             }
         }
 
         image.flip_vertically(); // i want to have the origin at the left bottom corner of the image
-        image.write_tga_file("texture.tga");
+        image.write_tga_file("l3_texture.tga");
 
         delete [] zbuffer;
     }

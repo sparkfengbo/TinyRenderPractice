@@ -85,6 +85,7 @@ void Model::load_texture(std::string filename, const char *suffix, TGAImage &img
 }
 
 TGAColor Model::diffuse(Vec2i uv) {
+    std::cout<<"diffuse  uv.x = " << uv.x << "  uv.y = " << uv.y << "\n";
     return diffusemap_.get(uv.x, uv.y);
 }
 

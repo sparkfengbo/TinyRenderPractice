@@ -13,6 +13,8 @@ cmath
 -
 limits
 -
+iostream
+-
 tgaimage.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
 model.h
