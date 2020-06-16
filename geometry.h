@@ -46,7 +46,6 @@ template <class t> struct Vec3 {
 
 };
 
-
 typedef Vec2<float> Vec2f;
 typedef Vec2<int>   Vec2i;
 typedef Vec3<float> Vec3f;
