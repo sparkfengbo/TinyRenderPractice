@@ -12,7 +12,7 @@ const int depth  = 255;
 Model *model = NULL;
 int *zbuffer = NULL;
 Vec3f light_dir(0,0,-1);
-Vec3f camera(0,0,3);
+Vec3f camera(0,0,10);
 //Vec3f camera(0,3,0);
 
 Vec3f m2v(Matrix m) {
@@ -69,7 +69,8 @@ void triangle_texture(Vec3i t0, Vec3i t1, Vec3i t2, Vec2i uv0, Vec2i uv1, Vec2i 
             if (zbuffer[idx]<P.z) {
                 zbuffer[idx] = P.z;
                 TGAColor color = model->diffuse(uvP);
-                image.set(P.x, P.y, TGAColor(color.bgra[2]*intensity, color.bgra[1]*intensity, color.bgra[0]*intensity));
+                image.set(j, (t0.y+i), TGAColor(color.bgra[2]*intensity, color.bgra[1]*intensity, color.bgra[0]*intensity));
+//                image.set(P.x, P.y, TGAColor(color.bgra[2]*intensity, color.bgra[1]*intensity, color.bgra[0]*intensity));
             }
         }
     }
@@ -140,7 +141,7 @@ int main(int argc, char** argv) {
         }
 
         image.flip_vertically(); // i want to have the origin at the left bottom corner of the image
-        image.write_tga_file("projection.tga");
+        image.write_tga_file("l4_projection.tga");
 
         delete [] zbuffer;
     }
@@ -188,7 +189,7 @@ int main(int argc, char** argv) {
         }
 
         image.flip_vertically(); // i want to have the origin at the left bottom corner of the image
-        image.write_tga_file("projection_texture.tga");
+        image.write_tga_file("l4_projection_texture.tga");
 
         delete [] zbuffer;
     }
