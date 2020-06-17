@@ -154,13 +154,11 @@ int main(int argc, char** argv) {
         for (int i=0; i<model->nfaces(); i++) {
             std::vector<int> face = model->face(i);
             Vec3i screen_coords[3];
-            Vec3f world_coords[3];
             float intensity[3];
             for (int j=0; j<3; j++) {
                 Vec3f v = model->vert(face[j]);
                 Vec3f tmp = m2v(ViewPort*Projection*ModelView*Matrix(v));
                 screen_coords[j] = Vec3i (tmp[0], tmp[1], tmp[2]);
-                world_coords[j]  = v;
                 intensity[j] = model->norm(i, j)*light_dir;
             }
             triangle(screen_coords[0], screen_coords[1], screen_coords[2], image, intensity[0], intensity[1], intensity[2], zbuffer);
@@ -194,14 +192,12 @@ int main(int argc, char** argv) {
         for (int i=0; i<model->nfaces(); i++) {
             std::vector<int> face = model->face(i);
             Vec3i screen_coords[3];
-            Vec3f world_coords[3];
             float intensity[3];
             for (int j=0; j<3; j++) {
                 Vec3f v = model->vert(face[j]);
                 Vec3f tmp = m2v(ViewPort * Projection * ModelView * Matrix(v));
                 screen_coords[j] = Vec3i (tmp[0], tmp[1], tmp[2]);
 //                screen_coords[j] = Vec3i((v.x+1.)*width/2., (v.y+1.)*height/2., (v.z+1.)*depth/2.);
-                world_coords[j]  = v;
                 intensity[j] = model->norm(i, j)*light_dir;
             }
             Vec2i uv[3];
