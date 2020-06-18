@@ -58,6 +58,7 @@ all: CMakeFiles/Lession4.dir/all
 all: CMakeFiles/Lession3.dir/all
 all: CMakeFiles/Lession2.dir/all
 all: CMakeFiles/Lession1_load_model.dir/all
+all: CMakeFiles/Lession6.dir/all
 all: CMakeFiles/Lession1.dir/all
 
 .PHONY : all
@@ -73,6 +74,7 @@ clean: CMakeFiles/Lession4.dir/clean
 clean: CMakeFiles/Lession3.dir/clean
 clean: CMakeFiles/Lession2.dir/clean
 clean: CMakeFiles/Lession1_load_model.dir/clean
+clean: CMakeFiles/Lession6.dir/clean
 clean: CMakeFiles/Lession1.dir/clean
 
 .PHONY : clean
@@ -211,6 +213,33 @@ Lession1_load_model: CMakeFiles/Lession1_load_model.dir/rule
 CMakeFiles/Lession1_load_model.dir/clean:
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/clean
 .PHONY : CMakeFiles/Lession1_load_model.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Lession6.dir
+
+# All Build rule for target.
+CMakeFiles/Lession6.dir/all:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/depend
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles --progress-num=27,28,29,30,31,32 "Built target Lession6"
+.PHONY : CMakeFiles/Lession6.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Lession6.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Lession6.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Lession6.dir/rule
+
+# Convenience name for target.
+Lession6: CMakeFiles/Lession6.dir/rule
+
+.PHONY : Lession6
+
+# clean rule for target.
+CMakeFiles/Lession6.dir/clean:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/clean
+.PHONY : CMakeFiles/Lession6.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Lession1.dir

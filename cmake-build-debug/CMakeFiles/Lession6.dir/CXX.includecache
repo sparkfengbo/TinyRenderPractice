@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/fengbo/CLionProjects/TinyRenderPractice/L5_Camera.cpp
+/Users/fengbo/CLionProjects/TinyRenderPractice/L6_Shader.cpp
 vector
 -
 cmath
@@ -19,32 +19,40 @@ model.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/model.h
 geometry.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+our_gl.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/our_gl.h
 
 /Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+vector
+-
 cmath
 -
 ostream
 -
 
-/Users/fengbo/CLionProjects/TinyRenderPractice/model.cpp
-model.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/model.h
-iostream
--
-string
--
-fstream
--
-sstream
--
 vector
 -
 geometry.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+tgaimage.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
 
-/Users/fengbo/CLionProjects/TinyRenderPractice/model.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/our_gl.cpp
+our_gl.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/our_gl.h
+cmath
+-
 vector
 -
+limits
+-
+tgaimage.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
+geometry.h
+/Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+
+/Users/fengbo/CLionProjects/TinyRenderPractice/our_gl.h
 geometry.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
 tgaimage.h

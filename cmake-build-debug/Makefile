@@ -176,6 +176,19 @@ Lession1_load_model/fast:
 .PHONY : Lession1_load_model/fast
 
 #=============================================================================
+# Target rules for targets named Lession6
+
+# Build rule for target.
+Lession6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Lession6
+.PHONY : Lession6
+
+# fast build rule for target.
+Lession6/fast:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/build
+.PHONY : Lession6/fast
+
+#=============================================================================
 # Target rules for targets named Lession1
 
 # Build rule for target.
@@ -353,6 +366,33 @@ L5_Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/Lession5.dir/build.make CMakeFiles/Lession5.dir/L5_Camera.cpp.s
 .PHONY : L5_Camera.cpp.s
 
+L6_Shader.o: L6_Shader.cpp.o
+
+.PHONY : L6_Shader.o
+
+# target to build an object file
+L6_Shader.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/L6_Shader.cpp.o
+.PHONY : L6_Shader.cpp.o
+
+L6_Shader.i: L6_Shader.cpp.i
+
+.PHONY : L6_Shader.i
+
+# target to preprocess a source file
+L6_Shader.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/L6_Shader.cpp.i
+.PHONY : L6_Shader.cpp.i
+
+L6_Shader.s: L6_Shader.cpp.s
+
+.PHONY : L6_Shader.s
+
+# target to generate assembly for a file
+L6_Shader.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/L6_Shader.cpp.s
+.PHONY : L6_Shader.cpp.s
+
 geometry.o: geometry.cpp.o
 
 .PHONY : geometry.o
@@ -361,6 +401,7 @@ geometry.o: geometry.cpp.o
 geometry.cpp.o:
 	$(MAKE) -f CMakeFiles/Lession5.dir/build.make CMakeFiles/Lession5.dir/geometry.cpp.o
 	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/geometry.cpp.o
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/geometry.cpp.o
 .PHONY : geometry.cpp.o
 
 geometry.i: geometry.cpp.i
@@ -371,6 +412,7 @@ geometry.i: geometry.cpp.i
 geometry.cpp.i:
 	$(MAKE) -f CMakeFiles/Lession5.dir/build.make CMakeFiles/Lession5.dir/geometry.cpp.i
 	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/geometry.cpp.i
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/geometry.cpp.i
 .PHONY : geometry.cpp.i
 
 geometry.s: geometry.cpp.s
@@ -381,6 +423,7 @@ geometry.s: geometry.cpp.s
 geometry.cpp.s:
 	$(MAKE) -f CMakeFiles/Lession5.dir/build.make CMakeFiles/Lession5.dir/geometry.cpp.s
 	$(MAKE) -f CMakeFiles/Lession4.dir/build.make CMakeFiles/Lession4.dir/geometry.cpp.s
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/geometry.cpp.s
 .PHONY : geometry.cpp.s
 
 model.o: model.cpp.o
@@ -394,6 +437,7 @@ model.cpp.o:
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.o
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.o
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/model.cpp.o
 .PHONY : model.cpp.o
 
 model.i: model.cpp.i
@@ -407,6 +451,7 @@ model.cpp.i:
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.i
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.i
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/model.cpp.i
 .PHONY : model.cpp.i
 
 model.s: model.cpp.s
@@ -420,7 +465,35 @@ model.cpp.s:
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/model.cpp.s
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/model.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/model.cpp.s
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/model.cpp.s
 .PHONY : model.cpp.s
+
+our_gl.o: our_gl.cpp.o
+
+.PHONY : our_gl.o
+
+# target to build an object file
+our_gl.cpp.o:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/our_gl.cpp.o
+.PHONY : our_gl.cpp.o
+
+our_gl.i: our_gl.cpp.i
+
+.PHONY : our_gl.i
+
+# target to preprocess a source file
+our_gl.cpp.i:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/our_gl.cpp.i
+.PHONY : our_gl.cpp.i
+
+our_gl.s: our_gl.cpp.s
+
+.PHONY : our_gl.s
+
+# target to generate assembly for a file
+our_gl.cpp.s:
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/our_gl.cpp.s
+.PHONY : our_gl.cpp.s
 
 tgaimage.o: tgaimage.cpp.o
 
@@ -433,6 +506,7 @@ tgaimage.cpp.o:
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.o
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/tgaimage.cpp.o
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.o
 .PHONY : tgaimage.cpp.o
 
@@ -447,6 +521,7 @@ tgaimage.cpp.i:
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.i
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/tgaimage.cpp.i
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.i
 .PHONY : tgaimage.cpp.i
 
@@ -461,6 +536,7 @@ tgaimage.cpp.s:
 	$(MAKE) -f CMakeFiles/Lession3.dir/build.make CMakeFiles/Lession3.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession2.dir/build.make CMakeFiles/Lession2.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1_load_model.dir/build.make CMakeFiles/Lession1_load_model.dir/tgaimage.cpp.s
+	$(MAKE) -f CMakeFiles/Lession6.dir/build.make CMakeFiles/Lession6.dir/tgaimage.cpp.s
 	$(MAKE) -f CMakeFiles/Lession1.dir/build.make CMakeFiles/Lession1.dir/tgaimage.cpp.s
 .PHONY : tgaimage.cpp.s
 
@@ -477,6 +553,7 @@ help:
 	@echo "... Lession3"
 	@echo "... Lession2"
 	@echo "... Lession1_load_model"
+	@echo "... Lession6"
 	@echo "... Lession1"
 	@echo "... L1_Bresenham_Line_Algorithm.o"
 	@echo "... L1_Bresenham_Line_Algorithm.i"
@@ -496,12 +573,18 @@ help:
 	@echo "... L5_Camera.o"
 	@echo "... L5_Camera.i"
 	@echo "... L5_Camera.s"
+	@echo "... L6_Shader.o"
+	@echo "... L6_Shader.i"
+	@echo "... L6_Shader.s"
 	@echo "... geometry.o"
 	@echo "... geometry.i"
 	@echo "... geometry.s"
 	@echo "... model.o"
 	@echo "... model.i"
 	@echo "... model.s"
+	@echo "... our_gl.o"
+	@echo "... our_gl.i"
+	@echo "... our_gl.s"
 	@echo "... tgaimage.o"
 	@echo "... tgaimage.i"
 	@echo "... tgaimage.s"

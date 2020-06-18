@@ -5,6 +5,7 @@
 #ifndef TINYRENDERPRACTICE_GEOMETRY_H
 #define TINYRENDERPRACTICE_GEOMETRY_H
 
+#include <vector>
 #include <cmath>
 #include <ostream>
 

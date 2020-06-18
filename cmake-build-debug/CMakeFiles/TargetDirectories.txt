@@ -5,4 +5,5 @@
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession3.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession2.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession1_load_model.dir
+/Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession6.dir
 /Users/fengbo/CLionProjects/TinyRenderPractice/cmake-build-debug/CMakeFiles/Lession1.dir
