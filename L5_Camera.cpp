@@ -1,6 +1,7 @@
 #include <vector>
 #include <cmath>
 #include <limits>
+#include <iostream>
 #include "tgaimage.h"
 #include "model.h"
 #include "geometry.h"
@@ -91,7 +92,10 @@ void triangle_texture(Vec3i t0, Vec3i t1, Vec3i t2, Vec2i uv0, Vec2i uv1, Vec2i 
             if (zbuffer[idx]<P.z) {
                 zbuffer[idx] = P.z;
                 TGAColor color = model->diffuse(uvP);
-                image.set(j, (t0.y+i), TGAColor(color.bgra[2]*ityP, color.bgra[1]*ityP, color.bgra[0]*ityP));
+                if (ityP > 0) {
+                    image.set(j, (t0.y + i),
+                              TGAColor(color.bgra[2] * ityP, color.bgra[1] * ityP, color.bgra[0] * ityP));
+                }
 //                image.set(P.x, P.y, TGAColor(color.bgra[2]*intensity, color.bgra[1]*intensity, color.bgra[0]*intensity));
             }
         }
@@ -122,12 +126,15 @@ void triangle(Vec3i t0, Vec3i t1, Vec3i t2, TGAImage &image, float ity0, float i
             float phi = B.x==A.x ? 1. : (float)(j-A.x)/(float)(B.x-A.x);
             Vec3i P = A + (B-A)*phi;
             float ityP =    ityA  + (ityB-ityA)*phi;
+//            std::cout<<"instensity = " << ityP << "\n";
             P.x = j;
             P.y = t0.y+i; // a hack to fill holes (due to int cast precision problems)
             int idx = j+(t0.y+i)*width;
             if (zbuffer[idx]<P.z) {
                 zbuffer[idx] = P.z;
-                image.set(j, (t0.y+i), TGAColor(255, 255, 255)*ityP);
+                if (ityP > 0) {
+                    image.set(j, (t0.y+i), TGAColor(255, 255, 255)*ityP);
+                }
             }
         }
     }

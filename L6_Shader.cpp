@@ -36,7 +36,7 @@ Matrix v2m(Vec3f v) {
 
 struct Shader : public IShader {
     Vec2i varying_uv[3];
-    float varying_inty[3];
+    Vec3f varying_inty;
 
     virtual Vec3i vertex(int iface, int nthvert) {
         varying_inty[nthvert] = model->norm(iface, nthvert)*light_dir;
@@ -53,6 +53,16 @@ struct Shader : public IShader {
 //        color = model->diffuse(uv)*inty;
         float inty = model->norm(uv)*light_dir;
         color = model->diffuse(uv)*inty;
+//
+//        float intensity = varying_inty * bar;
+//        if (intensity>.85) intensity = 1;
+//        else if (intensity>.60) intensity = .80;
+//        else if (intensity>.45) intensity = .60;
+//        else if (intensity>.30) intensity = .45;
+//        else if (intensity>.15) intensity = .30;
+//        else intensity = 0;
+//        color = TGAColor(255, 155, 0)*intensity;
+//        color = model->diffuse(uv)*intensity;
         return false;
     }
 };

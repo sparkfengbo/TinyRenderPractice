@@ -13,6 +13,8 @@ cmath
 -
 limits
 -
+iostream
+-
 tgaimage.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/tgaimage.h
 model.h
@@ -21,26 +23,12 @@ geometry.h
 /Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
 
 /Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
+vector
+-
 cmath
 -
 ostream
 -
-
-/Users/fengbo/CLionProjects/TinyRenderPractice/model.cpp
-model.h
-/Users/fengbo/CLionProjects/TinyRenderPractice/model.h
-iostream
--
-string
--
-fstream
--
-sstream
--
-vector
--
-geometry.h
-/Users/fengbo/CLionProjects/TinyRenderPractice/geometry.h
 
 /Users/fengbo/CLionProjects/TinyRenderPractice/model.h
 vector
