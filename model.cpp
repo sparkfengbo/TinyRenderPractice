@@ -54,6 +54,7 @@ Model::Model(const char *filename) : verts_(), faces_(), norms_(), uv_(), diffus
     std::cerr << "# v# " << verts_.size() << " f# "  << faces_.size() << " vt# " << uv_.size() << " vn# " << norms_.size() << std::endl;
     load_texture(filename, "_diffuse.tga", diffusemap_);
     load_texture(filename, "_nm.tga",      normalmap_);
+    load_texture(filename, "_spec.tga",    specularmap_);
 }
 
 Model::~Model() {
@@ -115,3 +116,7 @@ Vec3f Model::vert(int iface, int nthvert) {
     return verts_[faces_[iface][nthvert][0]];
 }
 
+float Model::specular(Vec2i uvf) {
+    Vec2i uv(uvf[0]*specularmap_.get_width(), uvf[1]*specularmap_.get_height());
+    return specularmap_.get(uv[0], uv[1])[0]/1.f;
+}
