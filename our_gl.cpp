@@ -18,10 +18,10 @@ void viewport(int x, int y, int w, int h) {
     Viewport = Matrix::identity(4);
     Viewport[0][3] = x+w/2.f;
     Viewport[1][3] = y+h/2.f;
-    Viewport[2][3] = 255.f/2.f;
+    Viewport[2][3] = depth/2.f;
     Viewport[0][0] = w/2.f;
     Viewport[1][1] = h/2.f;
-    Viewport[2][2] = 255.f/2.f;
+    Viewport[2][2] = depth/2.f;
 }
 
 void projection(float coeff) {
@@ -71,4 +71,21 @@ void triangle(Vec3i *pts, IShader &shader, TGAImage &image, TGAImage &zbuffer) {
         }
     }
 //    image.set(j, (t0.y+i), TGAColor(color.bgra[2]*ityP, color.bgra[1]*ityP, color.bgra[0]*ityP));
+}
+
+Vec3f barycentric(Vec2f A, Vec2f B, Vec2f C, Vec2f P) {
+    Vec3f s[2];
+    for (int i=2; i--; ) {
+        s[i][0] = C[i]-A[i];
+        s[i][1] = B[i]-A[i];
+        s[i][2] = A[i]-P[i];
+    }
+    Vec3f u = s[0] ^ s[1];
+    if (std::abs(u[2])>1e-2) // dont forget that u[2] is integer. If it is zero then triangle ABC is degenerate
+        return Vec3f(1.f-(u.x+u.y)/u.z, u.y/u.z, u.x/u.z);
+    return Vec3f(-1,1,1); // in this case generate negative coordinates, it will be thrown away by the rasterizator
+}
+
+Vec2f getV2fromV4(Vec4f v) {
+    return Vec2f (v.x, v.y);
 }

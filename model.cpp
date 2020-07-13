@@ -55,6 +55,7 @@ Model::Model(const char *filename) : verts_(), faces_(), norms_(), uv_(), diffus
     load_texture(filename, "_diffuse.tga", diffusemap_);
     load_texture(filename, "_nm.tga",      normalmap_);
     load_texture(filename, "_spec.tga",    specularmap_);
+    load_texture(filename, "_nm_tangent.tga",    tangent_normalmap_);
 }
 
 Model::~Model() {
@@ -119,4 +120,12 @@ Vec3f Model::vert(int iface, int nthvert) {
 float Model::specular(Vec2i uvf) {
     Vec2i uv(uvf[0]*specularmap_.get_width(), uvf[1]*specularmap_.get_height());
     return specularmap_.get(uv[0], uv[1])[0]/1.f;
+}
+
+Vec3f Model::tangent_norm(Vec2i uv) {
+    TGAColor c = normalmap_.get(uv.x, uv.y);
+    Vec3f res;
+    for (int i=0; i<3; i++)
+        res[2-i] = (float)c[i]/255.f*2.f - 1.f;
+    return res;
 }

@@ -12,9 +12,10 @@
 extern Matrix ModelView;
 extern Matrix Viewport;
 extern Matrix Projection;
+const float depth = 2000.f;
 
 void viewport(int x, int y, int w, int h);
-void projection(float coeff=0.f); // coeff = -1/c
+void projection(float coeff=0.f);
 void lookat(Vec3f eye, Vec3f center, Vec3f up);
 
 struct IShader {
@@ -24,5 +25,7 @@ struct IShader {
 };
 
 void triangle(Vec3i *pts, IShader &shader, TGAImage &image, TGAImage &zbuffer);
-
+void triangle_shadow(Vec4f *pts, IShader &shader, TGAImage &image, float *zbuffer);
+Vec3f barycentric(Vec2f A, Vec2f B, Vec2f C, Vec2f P);
+Vec2f getV2fromV4(Vec4f v);
 #endif //TINYRENDERPRACTICE_OUR_GL_H

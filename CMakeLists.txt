@@ -3,7 +3,7 @@ project(TinyRenderPractice)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Lession1 tgaimage.cpp tgaimage.h L1_Bresenham_Line_Algorithm.cpp L2_Triangle.cpp)
+add_executable(Lession1 tgaimage.cpp tgaimage.h L1_Bresenham_Line_Algorithm.cpp)
 
 add_executable(Lession1_load_model tgaimage.cpp tgaimage.h L1_load_model_obj.cpp model.cpp model.h geometry.h)
 
@@ -16,5 +16,9 @@ add_executable(Lession4 tgaimage.cpp tgaimage.h L4_PerspectiveProjection.cpp mod
 add_executable(Lession5 tgaimage.cpp tgaimage.h L5_Camera.cpp model.cpp model.h geometry.h geometry.cpp)
 
 add_executable(Lession6 tgaimage.cpp tgaimage.h L6_Shader.cpp model.cpp model.h geometry.h geometry.cpp our_gl.cpp our_gl.h)
+
+add_executable(Lession7 tgaimage.cpp tgaimage.h L7_Shadow.cpp model.cpp model.h geometry.h geometry.cpp our_gl.cpp our_gl.h)
+
+
 
 
