@@ -59,12 +59,12 @@ template <class t> struct Vec4 {
 
 //    inline Vec4<t> operator +(const Vec4<t> &v) const { return Vec4<t>(x+v.x, y+v.y, z+v.z); }
 //    inline Vec4<t> operator -(const Vec3<t> &v) const { return Vec3<t>(x-v.x, y-v.y, z-v.z); }
-//    inline Vec4<t> operator *(float f)          const { return Vec3<t>(x*f, y*f, z*f); }
+    inline Vec4<t> operator *(float f)          const { return Vec4<t>(x*f, y*f, z*f, w*f); }
 //    inline t       operator *(const Vec3<t> &v) const { return x*v.x + y*v.y + z*v.z; }
 //    float norm () const { return std::sqrt(x*x+y*y+z*z); }
 //
-//    Vec3<t> & normalize(t l=1) { *this = (*this)*(l/norm()); return *this; }
-
+    Vec4<t> & normalize(t l=1) { *this = (*this)*(l/norm()); return *this; }
+    float norm () const { return std::sqrt(x*x+y*y+z*z + w*w); }
 
     template <class > friend std::ostream& operator<<(std::ostream& s, Vec3<t>& v);
     t& operator[](const int i) {return raw[i];}

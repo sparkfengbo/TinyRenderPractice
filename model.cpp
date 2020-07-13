@@ -100,6 +100,10 @@ Vec2i Model::uv(int iface, int nvert) {
     return Vec2i(uv_[idx].x*diffusemap_.get_width(), uv_[idx].y*diffusemap_.get_height());
 }
 
+Vec2f Model::uv2(int iface, int nthvert) {
+    return uv_[faces_[iface][nthvert][1]];
+}
+
 Vec3f Model::norm(int iface, int nvert) {
     int idx = faces_[iface][nvert][2];
     return norms_[idx].normalize();
@@ -118,8 +122,8 @@ Vec3f Model::vert(int iface, int nthvert) {
 }
 
 float Model::specular(Vec2i uvf) {
-    Vec2i uv(uvf[0]*specularmap_.get_width(), uvf[1]*specularmap_.get_height());
-    return specularmap_.get(uv[0], uv[1])[0]/1.f;
+//    Vec2i uv(uvf[0]*specularmap_.get_width(), uvf[1]*specularmap_.get_height());
+    return specularmap_.get(uvf[0], uvf[1])[0]/1.f;
 }
 
 Vec3f Model::tangent_norm(Vec2i uv) {
