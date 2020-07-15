@@ -81,69 +81,24 @@ struct ShadowShader{
                 varying_tri[0].y * bar.x + varying_tri[1].y * bar.y +varying_tri[2].y * bar.z,
                 varying_tri[0].z * bar.x + varying_tri[1].z * bar.y +varying_tri[2].z * bar.z
         );
-        if (yy < 4) {
-            std::cerr<<"fragment#uniform_Mshadow = " <<  uniform_Mshadow <<std::endl;
-            std::cerr<<"fragment#ss = " <<  p <<std::endl;
-        }
         Vec4f sb_p = m2v(uniform_Mshadow* Vec4f(p.x, p.y, p.z, 1)); // corresponding point in the shadow buffer
-        if (yy < 4) {
-            std::cerr<<"fragment#sb_p = " <<  sb_p <<std::endl;
-        }
         sb_p = sb_p/sb_p[3];
-        if (yy < 4) {
-            std::cerr<<"fragment#sb_p = " <<  sb_p <<std::endl;
-        }
-
         int idx = int(sb_p[0]) + int(sb_p[1])*width; // index in the shadowbuffer array
-        float shadow = .3+.7*(shadowbuffer[idx]<sb_p[2]);
-
-        if (yy < 4) {
-            std::cerr<<"fragment#shadow = " <<  shadow << " idx " << idx << std::endl;
-        }
-
+        //神奇的z-fighting
+        float shadow = .3+.7*(shadowbuffer[idx]<sb_p[2] +43.34);
         Vec2i uv = varying_uv[0] * bar.x + varying_uv[1] * bar.y + varying_uv[2] * bar.z;
-
-        if (yy < 4) {
-            std::cerr<<"fragment#uv = " <<  uv  <<std::endl;
-        }
-
         Vec3f normal = model->norm(uv);
-        if (yy < 4) {
-            std::cerr<<"fragment#normal = " <<  normal  <<std::endl;
-        }
         Vec4f nt = m2v(uniform_MIT * Vec4f(normal.x, normal.y, normal.z, 1));
         Vec3f n = Vec3f(nt.x, nt.y, nt.z).normalize();
-
-        if (yy < 4) {
-            std::cerr<<"fragment#n = " <<  n  <<std::endl;
-        }
-
         //法向量不能随便使用矩阵转换空间，尤其是发生scale的情况下，要使用矩阵的逆矩阵转置矩阵
         //转到世界空间
         Vec4f lt = m2v((uniform_M * Vec4f(light_dir.x, light_dir.y, light_dir.z, 1)));
         Vec3f l =Vec3f(lt.x, lt.y, lt.z).normalize(); // light vector
-
-        if (yy < 4) {
-            std::cerr<<"fragment#l = " <<  l  <<std::endl;
-        }
-
         Vec3f r = (n*(n*l*2.f) - l).normalize();   // reflected light
-
-        if (yy < 4) {
-            std::cerr<<"fragment#r = " <<  r  <<std::endl;
-        }
         float spec = pow(std::max(r.z, 0.0f), model->specular(uv));
         float diff = std::max(0.f, n*l);
         TGAColor c = model->diffuse(uv);
-
-        if (yy < 4) {
-            std::cerr<<"fragment#spec = " <<  spec  <<std::endl;
-            std::cerr<<"fragment#diff = " <<  diff  <<std::endl;
-        }
-
         for (int i=0; i<3; i++) color[i] = std::min<float>(20 + c[i]*shadow*(1.2*diff + .6*spec), 255);
-
-        yy++;
         return false;
     }
 };
@@ -288,11 +243,6 @@ int main(int argc, char **argv) {
         lookat(light_dir, center, up);
         viewport(width/8, height/8, width*3/4, height*3/4);
         projection(0);
-
-        std::cerr<<"ModelView = " << ModelView<<std::endl;
-        std::cerr<<"Projection = " <<Projection<<std::endl;
-        std::cerr<<"Viewport = " <<Viewport<<std::endl;
-
         DepthShader depthshader;
         Vec4f screen_coords[3];
         for (int i=0; i<model->nfaces(); i++) {
@@ -316,18 +266,6 @@ int main(int argc, char **argv) {
         lookat(eye, center, up);
         viewport(width/8, height/8, width*3/4, height*3/4);
         projection(-1.f/(eye-center).norm());
-
-        std::cerr<<ModelView<<std::endl;
-        std::cerr<<Projection<<std::endl;
-        std::cerr<<Viewport<<std::endl;
-
-        Matrix ss = (Projection*ModelView).inverse().transpose();
-        Matrix sss =M*(Viewport*Projection*ModelView).inverse();
-
-        std::cerr<<ss<<std::endl;
-        std::cerr<<sss<<std::endl;
-
-
         ShadowShader shader(ModelView, (Projection*ModelView).inverse().transpose(), M*(Viewport*Projection*ModelView).inverse());
         Vec4f screen_coords[3];
         for (int i=0; i<model->nfaces(); i++) {
