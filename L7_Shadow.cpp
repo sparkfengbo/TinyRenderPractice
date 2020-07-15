@@ -63,14 +63,7 @@ struct ShadowShader{
         varying_uv[nthvert] = model->uv(iface, nthvert);
         Vec3f vertex = model->vert(iface, nthvert);
         Vec4f gl_vertex(vertex.x, vertex.y, vertex.z, 1);
-        if (iface == 0) {
-            std::cerr<<"0 --- gl_vertex = "<<gl_vertex<<std::endl;
-        }
-
         gl_vertex = m2v(Viewport * Projection * ModelView * gl_vertex);
-        if (iface == 0) {
-            std::cerr<<"1 --- gl_vertex = "<<gl_vertex<<std::endl;
-        }
         varying_tri[nthvert] = projectDivision(gl_vertex);
         return gl_vertex;
     }
@@ -113,16 +106,7 @@ struct DepthShader{
     Vec4f vertex4f(int iface, int nthvert) {
         Vec3f vertex = model->vert(iface, nthvert);
         Vec4f gl_vertex(vertex.x, vertex.y, vertex.z, 1);
-
-        if (iface == 0) {
-            std::cerr<<"0 - gl_vertex = "<<gl_vertex<<std::endl;
-        }
-
         gl_vertex = m2v(Viewport * Projection * ModelView * gl_vertex);
-        if (iface == 0) {
-            std::cerr<<"1 - gl_vertex = "<<gl_vertex<<std::endl;
-        }
-
         varying_tri[nthvert] = projectDivision(gl_vertex);
         return gl_vertex;
     }
@@ -158,11 +142,6 @@ void triangle_shadow(Vec4f *pts, DepthShader &shader, TGAImage &image, float *zb
             Vec2f b = getV2fromV4(pts[1]/pts[1][3]);
             Vec2f e = (getV2fromV4(pts[2]/pts[2][3]));
             Vec3f c = barycentric(getV2fromV4(pts[0]/pts[0][3]), getV2fromV4(pts[1]/pts[1][3]), getV2fromV4(pts[2]/pts[2][3]), Vec2f(P.x, P.y));
-
-            if (on && xx < 4) {
-                std::cerr<<"barycentric#c = " << c<<std::endl;
-                xx ++;
-            }
 
             float z = pts[0][2]*c.x + pts[1][2]*c.y + pts[2][2]*c.z;
             float w = pts[0][3]*c.x + pts[1][3]*c.y + pts[2][3]*c.z;
@@ -266,7 +245,7 @@ int main(int argc, char **argv) {
         lookat(eye, center, up);
         viewport(width/8, height/8, width*3/4, height*3/4);
         projection(-1.f/(eye-center).norm());
-        ShadowShader shader(ModelView, (Projection*ModelView).inverse().transpose(), M*(Viewport*Projection*ModelView).inverse());
+        ShadowShader shader(ModelView, (Projection*ModelView).inverse().transpose(), M*((Viewport*Projection*ModelView).inverse()));
         Vec4f screen_coords[3];
         for (int i=0; i<model->nfaces(); i++) {
             for (int j=0; j<3; j++) {
