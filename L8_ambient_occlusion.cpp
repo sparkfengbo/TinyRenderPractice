@@ -179,14 +179,14 @@ int main(int argc, char **argv) {
     if (2 == argc) {
         model = new Model(argv[1]);
     } else {
-//        model = new Model("../obj/african_head.obj");
-        model = new Model("../obj/diablo3_pose.obj");
+        model = new Model("../obj/african_head.obj");
+//        model = new Model("../obj/diablo3_pose.obj");
     }
 
     zbuffer = new float[width * height];
     shadowbuffer = new float[width * height];
 
-    const int nrenders = 5;
+    const int nrenders = 1000;
     for (int iter = 1; iter <= nrenders; iter++) {
         std::cerr << iter << " from " << nrenders << std::endl;
         for (int i = 0; i < 3; i++) up[i] = (float) rand() / (float) RAND_MAX;
