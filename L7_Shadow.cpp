@@ -12,6 +12,8 @@ const int height = 800;
 
 float *zbuffer;
 float *shadowbuffer;
+TGAImage occlusion(width, height, TGAImage::GRAYSCALE);
+TGAImage occlusion_ssao(width, height, TGAImage::GRAYSCALE);
 
 Model *model = NULL;
 Vec3f center(0, 0, 0);
@@ -41,10 +43,6 @@ Matrix v2m(Vec3f v) {
 Vec3f projectDivision(Vec4f v) {
     return Vec3f(v[0]/v[3], v[1]/v[3],v[2]/v[3]);
 }
-
-
-int xx = 0;
-int yy = 0;
 
 struct ShadowShader{
     Vec4f m2v(Matrix m) {
@@ -91,7 +89,23 @@ struct ShadowShader{
         float spec = pow(std::max(r.z, 0.0f), model->specular(uv));
         float diff = std::max(0.f, n*l);
         TGAColor c = model->diffuse(uv);
-        for (int i=0; i<3; i++) color[i] = std::min<float>(20 + c[i]*shadow*(1.2*diff + .6*spec), 255);
+        TGAColor occ = occlusion.get(uv.x, uv.y);
+        TGAColor occ_ssao = occlusion_ssao.get(uv.x, uv.y);
+
+        for (int i=0; i<3; i++) {
+            //正常shadow
+            color[i] = std::min<float>(20 + c[i]*shadow*(1.2*diff + .6*spec), 255);
+
+            //使用AO
+//            float t0 = 20 + c[i]*(1.2*diff + .6*spec);
+//            float t1 =  occ[0] / 255.f;
+//            color[i] = std::min<float>(t0 * pow(1-t1, 2.2), 255);
+//
+            //使用ssao
+//            float t0 = 20 + c[i]*(1.2*diff + .6*spec);
+//            float t1 =  occ_ssao[i] / 255.f;
+//            color[i] = std::min<float>(t0 * pow(1-t1, 2.2), 255);
+        }
         return false;
     }
 };
@@ -121,8 +135,6 @@ struct DepthShader{
         return false;
     }
 };
-
-bool on = false;
 
 void triangle_shadow(Vec4f *pts, DepthShader &shader, TGAImage &image, float *zbuffer) {
     Vec2f bboxmin( std::numeric_limits<float>::max(),  std::numeric_limits<float>::max());
@@ -175,22 +187,7 @@ void triangle_final(Vec4f *pts, ShadowShader &shader, TGAImage &image, float *zb
             Vec2f a = getV2fromV4(pts[0]/pts[0][3]);
             Vec2f b = getV2fromV4(pts[1]/pts[1][3]);
             Vec2f e = (getV2fromV4(pts[2]/pts[2][3]));
-            if (on && xx < 4) {
-                std::cerr<<"barycentric#bboxmin = " <<  bboxmin <<std::endl;
-                std::cerr<<"barycentric#bboxmax = " <<  bboxmax <<std::endl;
-
-                std::cerr<<"barycentric#0 = " <<  a <<std::endl;
-                std::cerr<<"barycentric#1 = " <<  b<<std::endl;
-                std::cerr<<"barycentric#2 = " <<  e <<std::endl;
-                std::cerr<<"barycentric#3 = " <<  P <<std::endl;
-            }
             Vec3f c = barycentric(getV2fromV4(pts[0]/pts[0][3]), getV2fromV4(pts[1]/pts[1][3]), getV2fromV4(pts[2]/pts[2][3]), Vec2f(P.x, P.y));
-
-            if (on && xx < 4) {
-                std::cerr<<"barycentric#c = " << c<<std::endl;
-                xx ++;
-            }
-
             float z = pts[0][2]*c.x + pts[1][2]*c.y + pts[2][2]*c.z;
             float w = pts[0][3]*c.x + pts[1][3]*c.y + pts[2][3]*c.z;
             int frag_depth = z/w;
@@ -239,7 +236,12 @@ int main(int argc, char **argv) {
 
     Matrix M = Viewport*Projection*ModelView;
 
-    on = true;
+
+    occlusion.read_tga_file("l8_total.tga");
+    occlusion.flip_vertically();
+    occlusion_ssao.read_tga_file("l8_ssao.tga");
+    occlusion_ssao.flip_vertically();
+
     { // rendering the frame buffer
         TGAImage frame(width, height, TGAImage::RGB);
         lookat(eye, center, up);

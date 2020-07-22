@@ -21,6 +21,8 @@ add_executable(Lession7 tgaimage.cpp tgaimage.h L7_Shadow.cpp model.cpp model.h 
 
 add_executable(Lession8 tgaimage.cpp tgaimage.h L8_ambient_occlusion.cpp model.cpp model.h geometry.h geometry.cpp our_gl.cpp our_gl.h)
 
+add_executable(Lession8_ssao tgaimage.cpp tgaimage.h L8_ssao.cpp model.cpp model.h geometry.h geometry.cpp our_gl.cpp our_gl.h)
+
 
 
 
